@@ -1,0 +1,104 @@
+<div class="jumbotron mt-5 " style= "background-color: <%= @properties[:hex_color]%>30;">
+  <h1 class="display-4"><%=@element[:name]%></h1>
+  <p class="lead"><%=@information[:summary]%></p>
+  <hr class="my-4">
+  <p>Categoria: <%=@information[:category]%></p>
+  <a class="btn btn-primary btn-lg" href="<%= %>" role="button">Leia mais</a>
+</div>
+
+<div class="card mt-5 shadow-lg">
+    
+    <h1 class="card-title ml-5 mt-5">Sobre</h1>
+    
+    <div class="card-body">
+
+        <div class="row">
+
+            <div class="col-lg-4 text-center mt-5">
+                
+                <h4 class="text-dark">Utilidade</h4>
+                
+                <div class="justify-content-center align-items-center mt-5" >
+                    <div class="card shadow-lg">
+                        <img class="card-img-top" src="<%=@information[:utility_img]%>" alt="Card image cap">
+                        <div class="card-body bg-">
+                            
+                            <div class="embed-responsive embed-responsive-4by3 mt-3">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=_5-bo8a4zU0"></iframe>
+                            </div>
+                            
+                            <p class="card-text mt-3"><%=@information[:utility]%></p>
+                            
+                            <a class="btn btn-primary btn-lg" href="<%= %>" role="button">Leia mais</a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 text-center mt-5">
+                <h4 class="text-dark">Onde encontramos</h4>
+                <div class="justify-content-center align-items-center mt-5">
+                    <div class="card shadow-lg">
+                        <img class="card-img-top" src="<%=@information[:get_image]%>" alt="Card image cap">
+                        <div class="card-body">
+                            
+                            <div class="embed-responsive embed-responsive-4by3 mt-3">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=_5-bo8a4zU0"></iframe>
+                            </div>
+                            
+                            <p class="card-text mt-3"><%=@information[:how_produce]%></p>
+                            <a class="btn btn-primary btn-lg" href="<%= %>" role="button">Leia mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 text-center mt-5">
+                
+                <h4 class="text-dark">Quem descobriu</h4>
+            
+                <div class="justify-content-center align-items-center mt-5">
+                    <div class="card shadow-lg">
+                        <%= render "carousel"%>
+                        <div class="card-body">
+                            
+                            <div class="embed-responsive embed-responsive-4by3 mt-3">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=_5-bo8a4zU0"></iframe>
+                            </div>
+                            
+                            <p class="card-text mt-3">Descoberto por: <strong><%=@information[:discovered_by]%></strong></p>
+                            <%= link_to "Leia mais", show_individual_index_path(discovery_by: @element[:at_num]), {class: "btn btn-primary btn-lg", role: "button", onclick: "restoreExecuted()" }%>
+                            <p class="card-text mt-3">Nomeado por: <strong><%=@information[:named_by]%></strong></p>
+                            <%= link_to "Leia mais", show_individual_index_path(named_by: @element[:at_num]), {class: "btn btn-primary btn-lg", role: "button", onclick: "restoreExecuted()" }%>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+    
+</div>
+
+
+<div class="card mt-5 shadow">
+    
+    <h1 class="card-title ml-5 mt-5">Propriedades</h1>
+    
+    <div class="card-body">
+        
+        <div class="row mt-5 justify-content-center align-items-center p-3">
+            
+            <div class="col-12 justify-content-center align-items-center p-3 border-0">
+                <%= render "properties" %>
+            </div>
+        </div>
+        
+    </div>
+    
+</div>
+
+

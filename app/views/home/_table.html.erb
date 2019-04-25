@@ -1,0 +1,31 @@
+<div class="periodic">
+  <div class="periodic-row">
+      <%= create_line_with_interrupt( 1, 17, 0, -16, @elements) %>
+  </div>
+  <div class="periodic-row">
+      <%= create_line_with_interrupt( 2, 12, 2, -8, @elements) %>
+  </div>
+  <div class="periodic-row">
+      <%= create_line_with_interrupt( 2, 12, 10, 0, @elements) %>
+  </div>
+  <div class="periodic-row">
+        <%= create_line_without_interrupt( 18, @elements)%>
+  </div>
+  <div class="periodic-row">
+      <%= create_line_without_interrupt( 36, @elements)%>
+  </div>
+  <div class="periodic-row">
+      <%= create_line_with_interrupt( 2, 3, 54, 68, @elements) %>
+  </div>
+  <div class="periodic-row">
+      <%= create_line_with_interrupt( 2, 3, 86, 100, @elements) %>
+  </div>
+  <div class="periodic-row"></div>
+  <div class="periodic-row">
+      <%= create_line_with_interrupt( 0, 3, 0, 53, @elements) %>
+  </div>
+  <div class="periodic-row">
+      <%= create_line_with_interrupt( 0, 3, 0, 85, @elements) %>
+  </div>
+  <div style="clear: both;"></div>
+</div>

@@ -1,0 +1,104 @@
+<div class= "row">
+    <div class ="col-lg-4 col-sm-12 p-2">
+        <div class="card shadow-lg">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Densidade</h5>
+              <p class="card-text"><%= @properties[:density] %></p>
+              <a href="<%=@properties[:quote]%>" class="card-text"><small class="text-muted">Fonte:<%=@properties[:quote]%> </small></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class ="col-lg-4 col-sm-12 p-2">
+        <div class="card shadow-lg">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Ponto ebulição</h5>
+              <p class="card-text"><%= @properties[:boil] %> K</p>
+              <a href="<%=@properties[:quote]%>" class="card-text"><small class="text-muted">Fonte:<%=@properties[:quote]%> </small></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class ="col-lg-4 col-sm-12 p-2">
+        <div class="card shadow-lg">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Massa Atômica</h5>
+              <p class="card-text"><%=@properties[:atomic_mass]%></p>
+              <a href="<%=@properties[:quote]%>" class="card-text"><small class="text-muted">Fonte:<%=@properties[:quote]%> </small></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class= "row mt-5">
+    <div class ="col-lg-4 col-sm-12 p-2">
+        <div class="card shadow-lg">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Ponto de fusão</h5>
+              <p class="card-text"><%=@properties[:melt]%> K</p>
+              <a href="<%=@properties[:quote]%>" class="card-text"><small class="text-muted">Fonte:<%=@properties[:quote]%> </small></a>
+            </div>
+        </div>
+    </div>
+
+    <div class ="col-lg-4 col-sm-12 p-2">
+        <div class="card shadow-lg">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Massa molar</h5>
+              <p class="card-text"><%=@properties[:molar_helt]%></p>
+              <a href="<%=@properties[:quote]%>" class="card-text"><small class="text-muted">Fonte:<%=@properties[:quote]%> </small></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class ="col-lg-4 col-sm-12 p-2">
+        <div class="card shadow-lg">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Configuração eletrônica</h5>
+              <p class="card-text"><%=@properties[:electron_configuration]%></p>
+              <a href="<%=@properties[:quote]%>" class="card-text"><small class="text-muted">Fonte:<%=@properties[:quote]%> </small></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class= "row mt-5">
+    <div class ="col-lg-4 col-sm-12 p-2">
+        <div class="card shadow-lg">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Elétron afinidade</h5>
+              <p class="card-text"><%=@properties[:electron_affinity]%></p>
+              <a href="<%=@properties[:quote]%>" class="card-text"><small class="text-muted">Fonte:<%=@properties[:quote]%> </small></a>
+            </div>
+        </div>
+    </div>
+
+    <div class ="col-lg-4 col-sm-12 p-2">
+        <div class="card shadow-lg">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Eletronegatividade de Pauling</h5>
+              <p class="card-text"><%=@properties[:electronegativity_pauling]%></p>
+              <a href="<%=@properties[:quote]%>" class="card-text"><small class="text-muted">Fonte:<%=@properties[:quote]%> </small></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class ="col-lg-4 col-sm-12 p-2">
+        <div class="card shadow-lg">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Cor</h5>
+              <p class="card-text"><%=@properties[:color_name]%>.</p>
+              <a href="<%=@properties[:quote]%>" class="card-text"><small class="text-muted">Fonte:<%=@properties[:quote]%> </small></a>
+            </div>
+        </div>
+    </div>
+</div>
