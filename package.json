@@ -5,8 +5,10 @@
   "author": "Miller César de Oliveira",
   "license": "MIT",
   "dependencies": {
+    "bootstrap": "^4.3.1",
     "jquery": "^3.4.0",
     "popper.js": "^1.15.0",
-    "bootstrap": "^4.3.1"
+    "webpack": "^4.31.0",
+    "webpack-dev-server": "^3.3.1"
   }
 }
