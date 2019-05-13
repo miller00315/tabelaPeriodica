@@ -1,17 +1,16 @@
 <div id="carouselElement" class="carousel slide" data-ride="carousel">
 
   <div class="carousel-inner">
-      
+     
     <div class="carousel-item active">
-      <img src="<%=@information[:named_img]%>" alt="<%=@information[:named_by]%>" class="card-img-top h-25">
+      <img src="<%=@information[:named_img]%>" alt="<%=@information[:named_by] != nil ? @information[:named_by] : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBowkIcqJfj8kmmcKirc6axLEyq5gAyL_aDgad1FZ9QCTG6IaI" %>" class="card-img-top h-25">
           <div class="carousel-caption d-none d-md-block">
             <h5>Nomeado por</h5>
             <p><%=@information[:named_by]%></p>
           </div>
     </div>
-    
     <div class="carousel-item">
-      <img src="<%=@information[:discovery_img]%>" alt="<%=@information[:discovered_by]%>" class="card-img-top h-25">
+      <img src="<%=@information[:discovery_img]%>" alt="<%=@information[:discovered_by] != nil ? @information[:discovered_by] : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBowkIcqJfj8kmmcKirc6axLEyq5gAyL_aDgad1FZ9QCTG6IaI" %>" class="card-img-top h-25">
           <div class="carousel-caption d-none d-md-block">
             <h5>Descoberto por</h5>
             <p><%=@information[:discovered_by]%></p>
