@@ -1,3 +1,4 @@
+
 <div class="jumbotron mt-5 " style= "background-color: #ffffff30;">
   <h1 class="display-4"><%=@element[:name]%></h1>
   <p class="lead"><%=@information[:summary]%></p>
@@ -5,6 +6,8 @@
   <p>Categoria: <%=@information[:category]%></p>
   <a class="btn btn-primary btn-lg" href="<%= %>" role="button">Leia mais</a>
 </div>
+
+<%= link_to 'Back', onclick: "window.history.back()" %>
 
 <div class="card mt-5 shadow-lg">
     
@@ -55,9 +58,9 @@
                         <%= render "carousel"%>
                         <div class="card-body">
                             <p class="card-text mt-3">Descoberto por: <strong><%=@information[:discovered_by]%></strong></p>
-                            <%= link_to "Leia mais", show_individual_index_path(discovery_by: @element[:at_num]), {class: "btn btn-primary btn-lg", role: "button", onclick: "restoreExecuted()" }%>
+                            <%= link_to "Leia mais", show_individual_index_path(discovery_by: @element[:discovery_id]), {class: "btn btn-primary btn-lg", role: "button", onclick: "restoreExecuted()" }%>
                             <p class="card-text mt-3">Nomeado por: <strong><%=@information[:named_by]%></strong></p>
-                            <%= link_to "Leia mais", show_individual_index_path(named_by: @element[:at_num]), {class: "btn btn-primary btn-lg", role: "button", onclick: "restoreExecuted()" }%>
+                            <%= link_to "Leia mais", show_individual_index_path(named_by: @element[:named_id]), {class: "btn btn-primary btn-lg", role: "button", onclick: "restoreExecuted()" }%>
                         </div>
                     </div>
                 </div>

@@ -11,9 +11,9 @@
                 <div class="card shadow-lg">
                     
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title">Data nascimento/início</h5>
+                        <p class="card-text"><%= @element["birth"] %></p>
+                        
                     </div>
                     
                 </div>
@@ -25,23 +25,23 @@
                 <div class="card shadow-lg">
                     
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title">Data morte/fim</h5>
+                        <p class="card-text"><%= @element["die"] %></p>
+                        
                     </div>
                     
                 </div>
                 
             </div>
-            
+
             <div class="col-lg-4 col-sm-12 ">
 
                 <div class="card shadow-lg">
                     
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title">Nacionalidade</h5>
+                        <p class="card-text"><%= @element["nacionality"] %></p>
+                        
                     </div>
                     
                 </div>
@@ -49,17 +49,26 @@
             </div>
 
         </div>
-        
-        <div class= "row mt-5">
+
+         <div class= "row mt-5">
             
             <div class="col-lg-4 col-sm-12 ">
 
                 <div class="card shadow-lg">
                     
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title">Prêmios</h5>
+
+                        <% if @element["premium"]%>
+
+                            <ul>
+                                <% @element["premium"].each do |element| %>
+                                    <li><%=element%></li>
+                                <% end %>
+                            </ul>
+
+                        <% end %>
+                        
                     </div>
                     
                 </div>
@@ -71,29 +80,52 @@
                 <div class="card shadow-lg">
                     
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title">Feitos</h5>
+                        <%if @element["facts"]%>
+
+                            <ul>
+                                <% @element["facts"].each do |element| %>
+                                
+                                    <li><%=element%></li>
+
+                                <% end %>
+
+                            </ul>
+
+                        <% end %>
+                        
                     </div>
                     
                 </div>
                 
             </div>
-            
+
             <div class="col-lg-4 col-sm-12 ">
 
                 <div class="card shadow-lg">
                     
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title">Elementos descobertos</h5>
+
+                        <%if @element["elements"]%>
+
+                            <ul>
+                                <% @element["elements"].each do |element| %>
+
+                                    <li><%=element%></li>
+
+                                <% end %>
+
+                            </ul>
+
+                        <% end %>
+                        
                     </div>
                     
                 </div>
                 
             </div>
-            
+
         </div>
 
     </div>

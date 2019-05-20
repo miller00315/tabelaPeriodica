@@ -5,10 +5,15 @@ class ShowElementController < ApplicationController
   before_action :set_elements, only: [:show]
 
   def show
+
+
     @element = {at_num: @elements["elements"][params[:element].to_i - 1]["number"], 
                 symbol: @elements["elements"][params[:element].to_i - 1]["symbol"], 
                 name: @elements["elements"][params[:element].to_i - 1]["name"], 
-                number: @elements["elements"][params[:element].to_i - 1]["atomic_mass"]}
+                number: @elements["elements"][params[:element].to_i - 1]["atomic_mass"],
+                discovery_id: @elements["elements"][params[:element].to_i - 1]["discovery_id"],
+                named_id: @elements["elements"][params[:element].to_i - 1]["named_id"]
+                }
     
     @information = {
       category: @elements["elements"][params[:element].to_i - 1]["category"],
