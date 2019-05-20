@@ -14,6 +14,6 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
-//= require jquery
+//= require jquery/dist/jquery
 //= require bootstrap/dist/js/bootstrap
 //= require popper.js/dist/popper

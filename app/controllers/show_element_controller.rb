@@ -11,21 +11,18 @@ class ShowElementController < ApplicationController
                 number: @elements["elements"][params[:element].to_i - 1]["atomic_mass"]}
     
     @information = {
+      category: @elements["elements"][params[:element].to_i - 1]["category"],
       utility_img: @elements["elements"][params[:element].to_i - 1]["utility_img"],
       get_image: @elements["elements"][params[:element].to_i - 1]["get_img"],
       summary: @elements["elements"][params[:element].to_i - 1]["summary"],
       discovered_by: @elements["elements"][params[:element].to_i - 1]["discovered_by"] ? @elements["elements"][params[:element].to_i - 1]["discovered_by"] : 'desconhecido',
-      how_produce: "O alumínio ácido de Lewis liga-se ao oxigénio da molécula de água e o alumínio base de Lewis dissocia o 
-      átomo de hidrogénio. Se o processo ocorrer uma segunda vez, envolvendo dois outros átomos de alumínio, 
-      restarão dois átomos de hidrogénio, que se ligarão para formar uma molécula de hidrogénio na forma de gás (H2).",
-      named_by: @elements["elements"][params[:element].to_i - 1]["named_by"] ? @elements["elements"][params[:element].to_i - 1]["named_by"] : "Desconhecido",
+      how_produce: @elements["elements"][params[:element].to_i - 1]["how_produce"],
+      named_by: @elements["elements"][params[:element].to_i - 1]["named_by"] ? @elements["elements"][params[:element].to_i - 1]["named_by"] : @elements["elements"][params[:element].to_i - 1]["discovered_by"] ? @elements["elements"][params[:element].to_i - 1]["discovered_by"] : 'desconhecido',
       phase: @elements["elements"][params[:element].to_i - 1]["phase"],
-      utility: "Ela ocorre principalmente em água e na maior parte dos compostos orgânicos e é usado na produção de amoníaco 
-      e de outros produtos químicos, na hidrogenação de gorduras e óleos, e na soldagem.
-      O Gás Hidrogênio (H2) é explorado para uso em motores a combustão e em células de combustível.",
+      utility: @elements["elements"][params[:element].to_i - 1]["utility"],
       spectral_img: @elements["elements"][params[:element].to_i - 1]["spectral_img"],
       discovery_img: @elements["elements"][params[:element].to_i - 1]["discovery_img"],
-      named_img: @elements["elements"][params[:element].to_i - 1]["named_img"],
+      named_img: @elements["elements"][params[:element].to_i - 1]["named_img"] ? @elements["elements"][params[:element].to_i - 1]["named_img"] : @elements["elements"][params[:element].to_i - 1]["discovery_img"] ? @elements["elements"][params[:element].to_i - 1]["discovery_img"] : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBLzQlz0M52leMvfZRWPldnWElju72nM0aNO9c4CAkejrAOpPg",
     }
     
     @properties = {

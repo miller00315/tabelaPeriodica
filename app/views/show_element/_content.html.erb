@@ -2,7 +2,7 @@
   <h1 class="display-4"><%=@element[:name]%></h1>
   <p class="lead"><%=@information[:summary]%></p>
   <hr class="my-4">
-  <p>Categoria: <%=@properties[:category]%></p>
+  <p>Categoria: <%=@information[:category]%></p>
   <a class="btn btn-primary btn-lg" href="<%= %>" role="button">Leia mais</a>
 </div>
 
@@ -22,11 +22,7 @@
                     <div class="card shadow-lg">
                         <img class="card-img-top" src="<%=@information[:utility_img]%>" alt="Card image cap">
                         <div class="card-body bg-">
-                            
-                            <div class="embed-responsive embed-responsive-4by3 mt-3">
-                                <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=_5-bo8a4zU0"></iframe>
-                            </div>
-                            
+                           
                             <p class="card-text mt-3"><%=@information[:utility]%></p>
                             
                             <a class="btn btn-primary btn-lg" href="<%= %>" role="button">Leia mais</a>
@@ -43,10 +39,6 @@
                         <img class="card-img-top" src="<%=@information[:get_image]%>" alt="Card image cap">
                         <div class="card-body">
                             
-                            <div class="embed-responsive embed-responsive-4by3 mt-3">
-                                <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=_5-bo8a4zU0"></iframe>
-                            </div>
-                            
                             <p class="card-text mt-3"><%=@information[:how_produce]%></p>
                             <a class="btn btn-primary btn-lg" href="<%= %>" role="button">Leia mais</a>
                         </div>
@@ -62,11 +54,6 @@
                     <div class="card shadow-lg">
                         <%= render "carousel"%>
                         <div class="card-body">
-                            
-                            <div class="embed-responsive embed-responsive-4by3 mt-3">
-                                <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=_5-bo8a4zU0"></iframe>
-                            </div>
-                            
                             <p class="card-text mt-3">Descoberto por: <strong><%=@information[:discovered_by]%></strong></p>
                             <%= link_to "Leia mais", show_individual_index_path(discovery_by: @element[:at_num]), {class: "btn btn-primary btn-lg", role: "button", onclick: "restoreExecuted()" }%>
                             <p class="card-text mt-3">Nomeado por: <strong><%=@information[:named_by]%></strong></p>
